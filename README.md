@@ -16,3 +16,5 @@ PostgreSQL 15+
 Flyway per versionare lo schema
 
 Docker è stato usato come container per PostgreSql
+
+![Image Alt Text](ER.png)
