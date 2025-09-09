@@ -17,4 +17,7 @@ Flyway per versionare lo schema
 
 Docker è stato usato come container per PostgreSql
 
+
+The following image is the ER : 
+
 ![Image Alt Text](ER.png)
