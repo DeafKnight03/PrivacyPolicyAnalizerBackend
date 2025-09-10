@@ -27,6 +27,13 @@ public class Policy {
         if (createdAt == null) createdAt = OffsetDateTime.now();
     }
 
+    public Policy(User user, String content, OffsetDateTime createdAt) {
+
+        this.user = user;
+        this.content = content;
+        this.createdAt = createdAt;
+    }
+
     // getters/setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

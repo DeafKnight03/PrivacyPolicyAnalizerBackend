@@ -26,6 +26,13 @@ public class Analysis {
         if (createdAt == null) createdAt = OffsetDateTime.now();
     }
 
+    public Analysis(Policy policy, String data, OffsetDateTime createdAt) {
+
+        this.policy = policy;
+        this.data = data;
+        this.createdAt = createdAt;
+    }
+
     // getters/setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
