@@ -1,0 +1,77 @@
+[
+  {
+    "id": "GDPR_13_1_a",
+    "status": "present",
+    "reasoning": "The policy specifies the identity and contact details of the data controller, including the name and address of the Istituto di Formazione Superiore di Lonato."
+  },
+  {
+    "id": "GDPR_13_1_c",
+    "status": "present",
+    "reasoning": "The policy clearly explains that personal data is processed exclusively for institutional purposes, fulfilling the requirement for stating the purposes of processing."
+  },
+  {
+    "id": "GDPR_13_1_d",
+    "status": "present",
+    "reasoning": "The policy indicates that data processing is based on express legal obligation, which qualifies as a legal basis for processing."
+  },
+  {
+    "id": "GDPR_13_2_a",
+    "status": "missing",
+    "reasoning": "The policy does not specify an explicit retention period for the data or clear criteria for determining it."
+  },
+  {
+    "id": "GDPR_13_2_b",
+    "status": "present",
+    "reasoning": "The policy lists the rights of data subjects, including access, rectification, erasure, restriction, and objection, in accordance with GDPR."
+  },
+  {
+    "id": "GDPR_13_2_d",
+    "status": "present",
+    "reasoning": "The policy informs users of their right to lodge a complaint with the Italian Data Protection Authority in case of unlawful processing."
+  },
+  {
+    "id": "GDPR_13_1_e",
+    "status": "present",
+    "reasoning": "The policy lists categories of recipients, including private entities and public bodies, to whom personal data may be communicated."
+  },
+  {
+    "id": "GDPR_13_1_b",
+    "status": "present",
+    "reasoning": "The policy provides contact details for the Data Protection Officer, fulfilling the requirement for DPO contact information."
+  },
+  {
+    "id": "GDPR_13_1_f",
+    "status": "missing",
+    "reasoning": "The policy does not mention any transfers of personal data outside the EU/EEA, making this item irrelevant."
+  },
+  {
+    "id": "GDPR_13_2_c",
+    "status": "missing",
+    "reasoning": "The policy does not rely on consent as a legal basis for processing, thus this item is not applicable."
+  },
+  {
+    "id": "GDPR_14_1_d",
+    "status": "missing",
+    "reasoning": "The policy does not indicate that data is collected from third parties, making this item irrelevant."
+  },
+  {
+    "id": "GDPR_14_2_f",
+    "status": "missing",
+    "reasoning": "The policy does not indicate the source of personal data as it is not collected from third parties, making this item irrelevant."
+  },
+  {
+    "id": "GDPR_13_2_f",
+    "status": "missing",
+    "reasoning": "The policy does not mention any automated decision-making or profiling, making this item irrelevant."
+  },
+  {
+    "id": "EPRIVACY_COOKIES",
+    "status": "missing",
+    "reasoning": "The policy does not mention the use of cookies or similar tracking technologies, making this item irrelevant."
+  },
+  {
+    "id": "CHILDREN_DATA",
+    "status": "missing",
+    "reasoning": "The policy does not refer to handling children’s personal data, making this item irrelevant."
+  }
+]

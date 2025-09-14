@@ -1,0 +1,83 @@
+Information on the Processing of Personal Data
+(Articles 13-14 – EU Regulation No. 679/2016) The European General Data Protection Regulation (EU Regulation No. 679/2016, hereinafter GDPR) provides data subjects with a series of rights regarding the processing of personal data. As a data subject, you have the right to be informed about the processing of your data at our Institute for institutional purposes.
+
+Information on the Processing of Personal Data
+(Articles 13-14 – EU Regulation No. 679/2016)
+The European General Data Protection Regulation (EU Regulation No. 679/2016, hereinafter GDPR) provides data subjects with a series of rights regarding the processing of personal data. As a data subject, you have the right to be informed about the nature of the processing of your data and the rights granted to you by law.
+
+Data Controller
+The Data Controller is the Istituto di Formazione Superiore di Lonato, represented by its acting Headmaster Angelina Scarano, with registered office in Lonato del Garda, Via Galileo Galilei 1, telephone number +39 030 9130420, email address bsis03300r@istruzione.it
+
+Data Protection Officer (DPO)
+The Data Protection Officer (DPO) can be contacted at the following email address: rpd@vincenzi.com
+
+Purpose and Legal Basis of Processing
+Your data is processed exclusively for institutional purposes. The data must be provided by express legal obligation and, therefore, does not require your consent to its processing. Refusal to provide data will make it impossible to access or use the service.
+
+Duration of Processing
+The retention of your data, and therefore the duration of its processing, is carried out in compliance with the current legislation established by the Istituto di Formazione Superiore di Lonato (Istituto di Formazione Superiore di Lonato). Italians and the Conservation Index of the Superintendency of Archives.
+
+Processing Methods
+The processing of personal data, provided by you directly or indirectly, will be carried out automatically and/or manually at the Institute's premises, in compliance with the provisions of Article 32 of the GDPR and the AGID guidelines on security measures.
+
+Scope of Communication and Dissemination
+Your personal data will be disseminated and/or communicated only in accordance with specific laws and/or regulations. The parties to whom your data may be communicated are the following: private entities (both natural and legal persons) to whom the Institute assigns specific tasks for the performance of certain outsourced activities (e.g., system administrators, public service concessionaires, etc.); public bodies identified by law; private entities based on procedures for access to documents; and other parties established by law.
+
+Data Subject Rights
+Within the limits of the law and consistent with the Institution's institutional purposes, you may exercise your rights, as governed by Articles 15, 16, 17, 18, 19, and 21 of EU Regulation 679/2016, the full text of which is published below. To exercise your rights and for any other information, you may contact the Institute's offices during normal business hours or through the following channels:
+Phone: +39 030 9130420
+Email: bsis03300r@istruzione.it
+PEC: bsis03300r@pec.istruzione.it
+We inform you that you may always lodge a complaint with the Italian Data Protection Authority in any case of unlawful processing of your data.
+
+SPECIFICATION OF THE RIGHTS PROVIDED FOR BY EU REGULATION 679/2016
+Article 15 – Right of access by the data subject
+1. The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
+a) the purposes of the processing;
+b) the categories of personal data concerned;
+c) the recipients or categories of recipients to whom the personal data have been or will be disclosed, in particular recipients in third countries or international organisations;
+d) where possible, the envisaged period for which the personal data will be stored, or, if not possible, the criteria used to determine that period;
+e) the existence of the right to request from the controller rectification or erasure of personal data or restriction of processing of personal data concerning the data subject or to object to such processing;
+f) the right to lodge a complaint with a supervisory authority;
+g) where the personal data are not collected from the data subject, any available information as to their source;
+(h) the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4) and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.
+2. Where personal data are transferred to a third country or to an international organization, the data subject shall have the right to be informed of the appropriate safeguards pursuant to Article 46 relating to the transfer.
+3. The controller shall provide a copy of the personal data undergoing processing. For any further copies requested by the data subject, the controller may charge a reasonable fee based on administrative costs. Where the data subject makes the request by electronic means, and unless otherwise requested by the data subject, the information shall be provided in a commonly used electronic format.
+4. The right to obtain a copy referred to in paragraph 3 shall not adversely affect the rights and freedoms of others.
+
+Article 16 – Right to rectification
+The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.
+Article 17 – Right to erasure (“right to be forgotten”)
+1. The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay, and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies:
+a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed;
+b) the data subject withdraws consent on which the processing is based according to point (a) of Article 6(1), or point (a) of Article 9(2), and where there is no other legal ground for the processing;
+c) the data subject objects to the processing pursuant to Article 21(1) and there are no overriding legitimate grounds for the processing, or the data subject objects to the processing pursuant to Article 21(2);
+d) the personal data have been unlawfully processed;
+(e) the personal data have to be erased for compliance with a legal obligation in Union or Member State law to which the controller is subject;
+(f) the personal data have been collected in relation to the offer of information society services referred to in Article 8(1).
+2. Where the controller has made the personal data public and is obliged pursuant to paragraph 1 to erase the personal data, the controller, taking account of available technology and the cost of implementation, shall take reasonable steps, including technical measures, to inform controllers which are processing the personal data that the data subject has requested the erasure by such controllers of any links to, or copy or replication of, those personal data.
+3. Paragraphs 1 and 2 shall not apply to the extent that processing is necessary:
+a) for exercising the right of freedom of expression and information;
+(b) for compliance with a legal obligation which requires processing by Union or Member State law to which the controller is subject, or for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;
+(c) for reasons of public interest in the area of ​​public health in accordance with Article 9(2)(h) and (i) and Article 9(3);
+(d) for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes in accordance with Article 89(1) in so far as the right referred to in paragraph 1 is likely to render impossible or seriously impair the achievement of the objectives of that processing;
+(e) for the establishment, exercise, or defense of legal claims.
+
+Article 18 – Right to restriction of processing
+1. The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies:
+a) the accuracy of the personal data is contested by the data subject, for a period enabling the controller to verify the accuracy of the personal data;
+b) the processing is unlawful and the data subject opposes the erasure of the personal data and requests the restriction of their use instead;
+c) the controller no longer needs the personal data for the purposes of the processing, but they are required by the data subject for the establishment, exercise or defense of legal claims;
+d) the data subject has objected to processing pursuant to Article 21(1) pending the verification whether the legitimate grounds of the controller override those of the data subject.
+2. Where processing has been restricted pursuant to paragraph 1, such personal data shall, with the exception of storage, only be processed with the data subject's consent or for the establishment, exercise or defence of legal claims, or for the protection of the rights of another natural or legal person, or for reasons of important public interest of the Union or of a Member State.
+3. A data subject who has obtained restriction of processing pursuant to paragraph 1 shall be informed by the controller before the restriction of processing is lifted.
+
+Article 19 – Notification obligation regarding rectification or erasure of personal data or restriction of processing
+The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Articles 16, 17(1), and 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The data controller shall inform the data subject of these recipients upon request.
+Article 21 – Right to object
+1. The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling based on those provisions. The controller shall no longer process the personal data unless the controller demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or for the establishment, exercise or defense of legal claims.
+2. Where personal data are processed for direct marketing purposes, the data subject shall have the right to object at any time to processing of personal data concerning him or her for such marketing, which includes profiling to the extent that it is related to such direct marketing.
+3. Where the data subject objects to processing for direct marketing purposes, the personal data shall no longer be processed for such purposes.
+4. The right referred to in paragraphs 1 and 2 shall be explicitly brought to the attention of the data subject and shall be presented clearly and separately from any other information at the latest at the time of the first communication with the data subject.
+5. In the context of the use of information society services, and without prejudice to Directive 2002/58/EC, the data subject may exercise his or her right to object by automated means using technical specifications.
+6. Where personal data are processed for scientific or historical research purposes or statistical purposes pursuant to Article 89(1), the data subject, on grounds relating to his or her particular situation, shall have the right to object to processing of personal data concerning him or her, unless the processing is necessary for the performance of a task carried out for reasons of public interest.

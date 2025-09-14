@@ -1,0 +1,16 @@
+Proposta di Tesi: Modello con RAG per la Comprensione di Informative
+
+L’idea alla base di questa proposta è lo sviluppo di un modello di linguaggio potenziato con un approccio RAG (Retrieval-Augmented Generation), capace di leggere, comprendere e rispondere a domande basandosi su informative e documentazione testuale. 
+
+Il modello non si limita a generare risposte in modo autoregressivo, ma sfrutta un meccanismo di recupero da un archivio di informative indicizzate: 
+1. Una fase di *retrieval* individua i passaggi più rilevanti all’interno delle informative. 
+2. Una fase di *generation* produce la risposta, condizionata dal contesto recuperato, per garantire coerenza e correttezza rispetto ai documenti di origine. 
+
+La tesi si focalizza sulla progettazione e valutazione di tale pipeline, con obiettivi principali: 
+- Analizzare l’efficacia del RAG nel migliorare l’accuratezza rispetto a modelli puramente generativi. 
+- Studiare come strutturare e indicizzare le informative per massimizzare la qualità del recupero. 
+- Valutare metriche di performance non solo in termini di accuratezza delle risposte, ma anche di trasparenza e tracciabilità delle fonti. 
+
+L’applicazione pratica è pensata in contesti dove l’accesso rapido e affidabile a normative, informative o policy aziendali è critico, fornendo così un supporto avanzato sia agli utenti finali che agli operatori interni.
+
+Il tutto sarà incorporato in un applicazione Python based o Java con opportuna UI così da rendere il tutto user-friendly.

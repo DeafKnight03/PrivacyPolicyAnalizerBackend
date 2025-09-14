@@ -1,0 +1,137 @@
+[
+  {
+    "id": "GDPR_13_1_a",
+    "name": "controller_identity_contact",
+    "description": "Identity and contact details of the controller.",
+    "elementSpecificPrompt": "Find if the policy specifies the name, legal entity, or contact details of the data controller.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_1_c",
+    "name": "purposes_processing",
+    "description": "Purposes of processing the personal data.",
+    "elementSpecificPrompt": "Verify if the policy clearly explains why personal data is collected and processed.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_1_d",
+    "name": "legal_basis",
+    "description": "Legal basis for processing (consent, contract, legal obligation, legitimate interest, etc.).",
+    "elementSpecificPrompt": "Look for references to the lawful basis for processing the data (e.g., consent, contract, obligation).",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_2_a",
+    "name": "retention_period",
+    "description": "Period for which data will be stored, or criteria to determine it.",
+    "elementSpecificPrompt": "Look for explicit storage duration (e.g., X years) or clear criteria for retention.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_2_b",
+    "name": "rights_data_subject",
+    "description": "Existence of rights (access, rectification, erasure, restriction, portability, objection).",
+    "elementSpecificPrompt": "Check if the policy lists the rights that users can exercise regarding their data.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_2_d",
+    "name": "right_complain_DPA",
+    "description": "Right to lodge a complaint with a supervisory authority (e.g., Data Protection Authority).",
+    "elementSpecificPrompt": "Check if the policy informs users of their right to file a complaint with a Data Protection Authority.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_1_e",
+    "name": "recipients_categories",
+    "description": "Recipients or categories of recipients of the personal data.",
+    "elementSpecificPrompt": "Check if the policy lists third parties or categories (e.g., service providers, cloud hosts).",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "Always",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_13_1_b",
+    "name": "dpo_contact",
+    "description": "Contact details of the Data Protection Officer (if appointed).",
+    "elementSpecificPrompt": "Check if the policy mentions a Data Protection Officer (DPO) and provides a contact method.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If a DPO has been appointed",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_13_1_f",
+    "name": "transfers_outside_EU",
+    "description": "Details of transfers to non-EU/EEA countries and safeguards (e.g., SCC, adequacy).",
+    "elementSpecificPrompt": "Verify if the policy mentions international data transfers outside the EU/EEA and the safeguards applied.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If personal data is transferred outside the EU/EEA",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_13_2_c",
+    "name": "withdraw_consent",
+    "description": "Right to withdraw consent at any time (when consent is the basis).",
+    "elementSpecificPrompt": "Verify if the policy explains that consent can be withdrawn and how.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If consent is used as the legal basis",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_14_1_d",
+    "name": "categories_data",
+    "description": "Categories of personal data processed (only if data not collected directly from user).",
+    "elementSpecificPrompt": "If data is collected indirectly, check if the policy lists what types of data are included.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If data is collected from third parties",
+    "priority": 3
+  },
+  {
+    "id": "GDPR_14_2_f",
+    "name": "data_source",
+    "description": "Source of the personal data (if not collected directly from the data subject).",
+    "elementSpecificPrompt": "Check if the policy indicates where the personal data originates (e.g., third parties).",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If data is collected from third parties",
+    "priority": 3
+  },
+  {
+    "id": "GDPR_13_2_f",
+    "name": "profiling_automated_decisions",
+    "description": "Existence of automated decision-making, including profiling, and meaningful information about the logic and consequences.",
+    "elementSpecificPrompt": "Check if the policy states whether profiling or automated decisions are used and describes their impact.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If profiling or automated decision-making is carried out",
+    "priority": 3
+  },
+  {
+    "id": "EPRIVACY_COOKIES",
+    "name": "cookies_tracking",
+    "description": "Use of cookies or similar tracking technologies (ePrivacy/consent rules).",
+    "elementSpecificPrompt": "Verify if the policy mentions cookies, trackers, or provides a cookie banner.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If cookies or similar tracking technologies are used",
+    "priority": 3
+  },
+  {
+    "id": "CHILDREN_DATA",
+    "name": "children_minors",
+    "description": "Special rules for children’s data (e.g., parental consent under 14/16).",
+    "elementSpecificPrompt": "Check if the policy refers to handling children’s personal data and parental consent requirements.",
+    "judgement": "none/ambiguous/specified",
+    "required_if": "If services are directed to or used by children",
+    "priority": 3
+  }
+]

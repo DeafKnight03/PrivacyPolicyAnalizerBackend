@@ -1,0 +1,77 @@
+[
+  {
+    "id": "GDPR_13_1_a",
+    "status": "missing",
+    "reasoning": "The policy does not specify the identity or contact details of the data controller."
+  },
+  {
+    "id": "GDPR_13_1_c",
+    "status": "missing",
+    "reasoning": "The policy does not explain the purposes for which personal data is collected and processed."
+  },
+  {
+    "id": "GDPR_13_1_d",
+    "status": "missing",
+    "reasoning": "The policy does not mention the legal basis for processing personal data."
+  },
+  {
+    "id": "GDPR_13_2_a",
+    "status": "missing",
+    "reasoning": "The policy does not provide a retention period for data storage or criteria for determining it."
+  },
+  {
+    "id": "GDPR_13_2_b",
+    "status": "missing",
+    "reasoning": "The policy does not list the rights that users can exercise regarding their data."
+  },
+  {
+    "id": "GDPR_13_2_d",
+    "status": "missing",
+    "reasoning": "The policy does not inform users of their right to lodge a complaint with a supervisory authority."
+  },
+  {
+    "id": "GDPR_13_1_e",
+    "status": "missing",
+    "reasoning": "The policy does not list any recipients or categories of recipients of personal data."
+  },
+  {
+    "id": "GDPR_13_1_b",
+    "status": "missing",
+    "reasoning": "The policy does not mention a Data Protection Officer or provide contact details."
+  },
+  {
+    "id": "GDPR_13_1_f",
+    "status": "missing",
+    "reasoning": "The policy does not mention any transfers of personal data outside the EU/EEA."
+  },
+  {
+    "id": "GDPR_13_2_c",
+    "status": "missing",
+    "reasoning": "The policy does not explain the right to withdraw consent."
+  },
+  {
+    "id": "GDPR_14_1_d",
+    "status": "missing",
+    "reasoning": "The policy does not list categories of personal data processed if collected indirectly."
+  },
+  {
+    "id": "GDPR_14_2_f",
+    "status": "missing",
+    "reasoning": "The policy does not indicate the source of personal data if not collected directly."
+  },
+  {
+    "id": "GDPR_13_2_f",
+    "status": "missing",
+    "reasoning": "The policy does not state whether profiling or automated decision-making is used."
+  },
+  {
+    "id": "EPRIVACY_COOKIES",
+    "status": "missing",
+    "reasoning": "The policy does not mention the use of cookies or similar tracking technologies."
+  },
+  {
+    "id": "CHILDREN_DATA",
+    "status": "missing",
+    "reasoning": "The policy does not refer to handling children’s personal data or parental consent requirements."
+  }
+]
