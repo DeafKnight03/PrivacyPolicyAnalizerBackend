@@ -15,7 +15,7 @@ public class Analysis {
     @JoinColumn(name = "policy_id", nullable = false)
     private Policy policy;
 
-    @Column(name = "data", columnDefinition = "jsonb", nullable = false)
+    @Column(name = "data", columnDefinition = "text", nullable = false)
     private String data;  // JSON stored as String
 
     @Column(name = "created_at", nullable = false)
@@ -32,6 +32,8 @@ public class Analysis {
         this.data = data;
         this.createdAt = createdAt;
     }
+
+    public Analysis() {}
 
     // getters/setters
     public Long getId() { return id; }

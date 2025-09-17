@@ -15,7 +15,7 @@ public class Policy {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Lob
+
     @Column(columnDefinition = "text", nullable = false)
     private String content;
 
@@ -33,6 +33,8 @@ public class Policy {
         this.content = content;
         this.createdAt = createdAt;
     }
+
+    public Policy() {}
 
     // getters/setters
     public Long getId() { return id; }

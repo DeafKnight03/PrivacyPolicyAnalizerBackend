@@ -3,6 +3,7 @@ package com.example.myapp.controller;
 import com.example.myapp.dto.GetResult1;
 import com.example.myapp.dto.SaveResultRequest;
 import com.example.myapp.dto.StringDto;
+import com.example.myapp.dto.UserPoliciesList;
 import com.example.myapp.service.PolicyService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,9 +23,9 @@ public class PolicyController {
 
     /**
      * Crea una nuova Policy + Analysis
-     * POST /api/policies
+     * POST /api/policies/save
      */
-    @PostMapping
+    @PostMapping("/save")
     public ResponseEntity<Void> addPolicyAndAnalysis(@RequestBody SaveResultRequest req) {
         policyService.addPolicyAndAnalysis(req);
         return ResponseEntity.ok().build();
@@ -44,9 +45,9 @@ public class PolicyController {
      * Recupera tutte le policy di un utente (id → createdAt)
      * GET /api/policies/user/{userId}
      */
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<HashMap<Long, OffsetDateTime>> getPolicies(@PathVariable Long userId) {
-        HashMap<Long, OffsetDateTime> result = policyService.getPolicies(userId);
+    @PostMapping("/getPolicies")
+    public ResponseEntity<UserPoliciesList> getPolicies(@RequestBody StringDto req) {
+        UserPoliciesList result = policyService.getPolicies(req);
         return ResponseEntity.ok(result);
     }
 
@@ -55,4 +56,13 @@ public class PolicyController {
         StringDto result = policyService.analyzePolicy1(policyText);
         return ResponseEntity.ok(result);
     }
+
+    @PostMapping("/count")
+    public ResponseEntity<StringDto> count(@RequestBody StringDto id) {
+        StringDto res =  policyService.numPages(id);
+        return ResponseEntity.ok(res);
+
+    }
+
+
 }

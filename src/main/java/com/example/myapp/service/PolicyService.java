@@ -1,9 +1,6 @@
 package com.example.myapp.service;
 
-import com.example.myapp.dto.GetResult1;
-import com.example.myapp.dto.ProcessRunner;
-import com.example.myapp.dto.SaveResultRequest;
-import com.example.myapp.dto.StringDto;
+import com.example.myapp.dto.*;
 import com.example.myapp.entity.Analysis;
 import com.example.myapp.entity.Policy;
 import com.example.myapp.entity.User;
@@ -101,20 +98,84 @@ public class PolicyService {
     }
 
     @Transactional
-    public HashMap<Long, OffsetDateTime> getPolicies(Long userId) {
-        // Validazioni minime (meglio usare anche Bean Validation a livello DTO)
-        if (userId == null) throw new IllegalArgumentException("Request must not be null");
-        List<Policy> policies = policyRepo.findByUser_IdOrderByCreatedAtDesc(userId);
+    public UserPoliciesList getPolicies(StringDto req) {
+        UserPoliciesList result;
+        try{
+            Long userId = Long.parseLong( req.stringa().split(" / ")[0] );
+            if (userId == null) throw new IllegalArgumentException("Request must not be null");
+            int page = Integer.parseInt( req.stringa().split(" / ")[1] );
+            int start = (page * 6 ) -6;
+            int end = Math.min(page * 6, policyRepo.findByUser_IdOrderByCreatedAtDesc(userId).size());
 
-        HashMap<Long, OffsetDateTime> result = policies.stream()
-                .collect(java.util.stream.Collectors.toMap(
-                        Policy::getId,
-                        Policy::getCreatedAt,
-                        (existing, ignored) -> existing,
-                        HashMap::new
-                ));
+            List<Policy> list = policyRepo.findByUser_IdOrderByCreatedAtDesc( userId ).subList(start,end);
+            List<ListItem> returnList = list.stream().map(item->{
+                String textToReturn;
+                try{
+                    textToReturn = item.getContent().substring(0,401).concat("...");
+                }catch(IndexOutOfBoundsException e){
+                    textToReturn = item.getContent();
+                }
+
+                Long idToReturn = item.getId();
+                int resToReturn = getResult(analysisRepo.findByPolicy_IdOrderByCreatedAtAsc(item.getId()).get(0).getData());
+                /*int resToReturn = analysisRepo.findByPolicy_IdOrderByCreatedAtAsc(item.getId())
+                        .stream()
+                        .findFirst()                      // evita IndexOutOfBounds
+                        .map(Analysis::getData)
+                        .filter(Objects::nonNull)
+                        .map(this::getResult)
+                        .orElseThrow(() -> new NoSuchElementException("No analysis found for policy"));*/
+                OffsetDateTime dateToReturn = item.getCreatedAt();
+                return new ListItem(textToReturn,resToReturn,idToReturn,dateToReturn);
+            }).toList();
+            //List<Policy> policies = policyRepo.findByUser_IdOrderByCreatedAtDesc(userId);
+
+            result = new UserPoliciesList(returnList);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            throw new RuntimeException("Qualche errore... ");
+        }
         return result;
+    }
 
+
+    private int getResult(String resJson){
+        int missings = countOccurrences(resJson, "MISSING");
+        System.out.println("Missings: "+missings);
+        int ambiguos = countOccurrences(resJson, "AMBIGUOUS");
+        System.out.println("Ambiguos: "+ambiguos);
+        int present = countOccurrences(resJson, "PRESENT");
+        System.out.println("Present: "+present);
+        int max = missings + ambiguos + present;
+        int voto = (int)Math.ceil((((double)present+ambiguos*0.25)/(double)max)*10);
+
+        System.out.println("Voto: "+voto);
+        return voto;
+    }
+
+    private int countOccurrences(String text, String sub) {
+        // Se una delle due stringhe è nulla o vuota, non ci sono occorrenze.
+        if (text == null || sub == null || text.isEmpty() || sub.isEmpty()) {
+            return 0;
+        }
+
+        int count = 0;
+        int lastIndex = 0;
+
+        // Continua a cercare la sottostringa finché la trova.
+        while (lastIndex != -1) {
+            // Cerca la sottostringa a partire dall'ultimo indice trovato + 1
+            lastIndex = text.indexOf(sub, lastIndex);
+
+            // Se la sottostringa è stata trovata, incrementa il contatore
+            // e aggiorna l'indice di partenza per la prossima ricerca.
+            if (lastIndex != -1) {
+                count++;
+                lastIndex += sub.length(); // Sposta l'indice dopo la sottostringa trovata
+            }
+        }
+        return count;
     }
 
     public StringDto analyzePolicy1(StringDto policyText) {
@@ -133,7 +194,7 @@ public class PolicyService {
 
             // 3) Prepare a temp tool dir and extract script + companions into it
             Path toolDir = Files.createTempDirectory("policy-tool-");
-            Path exe     = extractTo(toolDir.resolve("policy-analyzer"),
+            Path exe     = extractTo(toolDir.resolve("policy-analyzer1"),
                     "com/example/myapp/scripts/policy-analyzer");
             // JSON (rename here if your file has a different name)
             extractTo(toolDir.resolve("checklist.json"),
@@ -178,6 +239,15 @@ public class PolicyService {
             target.toFile().deleteOnExit();
             return target;
         }
+    }
+
+    public StringDto numPages(StringDto userId){
+        System.out.println(userId.stringa());
+        Long id = Long.parseLong(userId.stringa());
+        //User user = userRepo.findById(id).orElseThrow(()->new EntityNotFoundException("User not found: "+id));
+        int size = policyRepo.findByUser_IdOrderByCreatedAtDesc(id).size();
+        return new StringDto(String.valueOf(size));
+
     }
 
 }

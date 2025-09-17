@@ -1,0 +1,2 @@
+ALTER TABLE analysis
+  ALTER COLUMN data TYPE TEXT;

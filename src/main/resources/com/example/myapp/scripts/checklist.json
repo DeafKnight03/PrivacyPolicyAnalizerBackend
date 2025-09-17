@@ -4,7 +4,7 @@
     "name": "controller_identity_contact",
     "description": "Identity and contact details of the controller.",
     "elementSpecificPrompt": "Find if the policy specifies the name, legal entity, or contact details of the data controller.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -13,7 +13,7 @@
     "name": "purposes_processing",
     "description": "Purposes of processing the personal data.",
     "elementSpecificPrompt": "Verify if the policy clearly explains why personal data is collected and processed.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -22,7 +22,7 @@
     "name": "legal_basis",
     "description": "Legal basis for processing (consent, contract, legal obligation, legitimate interest, etc.).",
     "elementSpecificPrompt": "Look for references to the lawful basis for processing the data (e.g., consent, contract, obligation).",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -31,7 +31,7 @@
     "name": "retention_period",
     "description": "Period for which data will be stored, or criteria to determine it.",
     "elementSpecificPrompt": "Look for explicit storage duration (e.g., X years) or clear criteria for retention.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -40,7 +40,7 @@
     "name": "rights_data_subject",
     "description": "Existence of rights (access, rectification, erasure, restriction, portability, objection).",
     "elementSpecificPrompt": "Check if the policy lists the rights that users can exercise regarding their data.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -49,7 +49,7 @@
     "name": "right_complain_DPA",
     "description": "Right to lodge a complaint with a supervisory authority (e.g., Data Protection Authority).",
     "elementSpecificPrompt": "Check if the policy informs users of their right to file a complaint with a Data Protection Authority.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 1
   },
@@ -58,7 +58,7 @@
     "name": "recipients_categories",
     "description": "Recipients or categories of recipients of the personal data.",
     "elementSpecificPrompt": "Check if the policy lists third parties or categories (e.g., service providers, cloud hosts).",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "Always",
     "priority": 2
   },
@@ -67,7 +67,7 @@
     "name": "dpo_contact",
     "description": "Contact details of the Data Protection Officer (if appointed).",
     "elementSpecificPrompt": "Check if the policy mentions a Data Protection Officer (DPO) and provides a contact method.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If a DPO has been appointed",
     "priority": 2
   },
@@ -76,7 +76,7 @@
     "name": "transfers_outside_EU",
     "description": "Details of transfers to non-EU/EEA countries and safeguards (e.g., SCC, adequacy).",
     "elementSpecificPrompt": "Verify if the policy mentions international data transfers outside the EU/EEA and the safeguards applied.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If personal data is transferred outside the EU/EEA",
     "priority": 2
   },
@@ -85,7 +85,7 @@
     "name": "withdraw_consent",
     "description": "Right to withdraw consent at any time (when consent is the basis).",
     "elementSpecificPrompt": "Verify if the policy explains that consent can be withdrawn and how.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If consent is used as the legal basis",
     "priority": 2
   },
@@ -94,7 +94,7 @@
     "name": "categories_data",
     "description": "Categories of personal data processed (only if data not collected directly from user).",
     "elementSpecificPrompt": "If data is collected indirectly, check if the policy lists what types of data are included.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If data is collected from third parties",
     "priority": 3
   },
@@ -103,7 +103,7 @@
     "name": "data_source",
     "description": "Source of the personal data (if not collected directly from the data subject).",
     "elementSpecificPrompt": "Check if the policy indicates where the personal data originates (e.g., third parties).",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If data is collected from third parties",
     "priority": 3
   },
@@ -112,26 +112,91 @@
     "name": "profiling_automated_decisions",
     "description": "Existence of automated decision-making, including profiling, and meaningful information about the logic and consequences.",
     "elementSpecificPrompt": "Check if the policy states whether profiling or automated decisions are used and describes their impact.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If profiling or automated decision-making is carried out",
     "priority": 3
   },
   {
-    "id": "EPRIVACY_COOKIES",
-    "name": "cookies_tracking",
-    "description": "Use of cookies or similar tracking technologies (ePrivacy/consent rules).",
-    "elementSpecificPrompt": "Verify if the policy mentions cookies, trackers, or provides a cookie banner.",
-    "judgement": "none/ambiguous/specified",
-    "required_if": "If cookies or similar tracking technologies are used",
-    "priority": 3
+    "id": "GDPR_13_1_c_d_13_2_a_COOKIES",
+    "name": "For each cookie category: explain purposes, state lawful basis, and indicate retention (Arts. 13(1)(c)-(d), 13(2)(a))",
+    "description": "Group by cookie/SDK category (e.g., strictly necessary, analytics, advertising) and for each clearly state the purpose, the legal basis (e.g., consent/contract/legitimate interests), and the retention/expiry (or precise criteria).",
+    "elementSpecificPrompt": "Locate a section that maps each cookie category to its concrete purpose(s), legal basis, and a duration/expiry or clear rule.",
+    "judgement": "present, missing, ambiguos, not require",
+    "required_if": "If any cookies/trackers are used",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_13_1_e_f_COOKIES",
+    "name": "Disclose recipients/third parties and any international transfers with safeguards (Arts. 13(1)(e)-(f))",
+    "description": "Identify third-party recipients (or categories) involved in cookie-based processing and, where data goes outside the EU/EEA, describe destinations and safeguards (e.g., SCCs/adequacy) and how to access them.",
+    "elementSpecificPrompt": "Find vendors or categories (analytics/ad partners) and any mention of non-EU transfers plus the safeguards/copy-access route.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "Recipients: If third-party cookies/SDKs are used. Transfers: If cookie data is sent outside the EU/EEA",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_13_2_c_21_13_2_f_22_COOKIES",
+    "name": "Explain consent withdrawal, right to object (if LI), and profiling/ADM logic & effects (Arts. 13(2)(c), 21, 13(2)(f) & 22)",
+    "description": "If any cookie category relies on consent, explain that consent can be withdrawn at any time and how. If any cookie processing relies on legitimate interests, inform about the right to object and how. If cookies are used for profiling/automated decisions, explain the logic involved and the envisaged consequences.",
+    "elementSpecificPrompt": "Look for (i) a practical way to withdraw consent; (ii) an explicit right-to-object statement with a channel; (iii) a plain explanation of profiling/ADM via cookies and its effects when applicable.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "Withdrawal: If any cookie uses consent. Objection: If any cookie processing relies on legitimate interests. Profiling/ADM: If profiling/automated decision-making is performed via cookies",
+    "priority": 2
   },
   {
     "id": "CHILDREN_DATA",
     "name": "children_minors",
-    "description": "Special rules for children’s data (e.g., parental consent under 14/16).",
+    "description": "Special rules for children’s data (e.g., parental consent under 14).",
     "elementSpecificPrompt": "Check if the policy refers to handling children’s personal data and parental consent requirements.",
-    "judgement": "none/ambiguous/specified",
+    "judgement": "present, missing, ambiguos, not required",
     "required_if": "If services are directed to or used by children",
     "priority": 3
+  },
+  {
+    "id": "GDPR_13_2_e",
+    "name": "State whether providing data is mandatory/contractual and the concrete consequences of refusal (Art. 13(2)(e))",
+    "description": "Clearly tell users which data are mandatory because of law/contract or needed to enter/perform a contract, and what happens if they are not provided (e.g., cannot create the account/process the order).",
+    "elementSpecificPrompt": "Locate a section that marks specific fields as mandatory due to law/contract/contractual necessity and spells out practical consequences of non-provision.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "If any personal data are a statutory requirement, a contractual requirement, or necessary to enter into/perform a contract (direct collection under Art. 13).",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_21",
+    "name": "Explain the right to object, including an anytime opt-out from direct marketing (Art. 21)",
+    "description": "Inform users they can object to processing based on public task/legitimate interests and that they can object to direct marketing at any time, with clear instructions on how to exercise the right.",
+    "elementSpecificPrompt": "Look for an explicit right-to-object clause and a practical channel (e.g., link, email, toggle). For marketing, verify the 'anytime opt-out' wording.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "If processing relies on public task/legitimate interests or if direct marketing is carried out",
+    "priority": 1
+  },
+  {
+    "id": "GDPR_26",
+    "name": "Disclose joint controllership and make the 'essence of the arrangement' available (Art. 26)",
+    "description": "If there are joint controllers, state that fact and provide access to the essence of their arrangement (roles, responsibilities, contact point for data subjects).",
+    "elementSpecificPrompt": "Search for the word 'joint controllers' and a pointer to the essence (who does what, how to contact). A link or summary is acceptable.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "If joint controllership applies",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_27",
+    "name": "Provide the EU representative’s identity and contact details when required (Art. 27)",
+    "description": "Where the controller/processor is not established in the EU but targets or monitors individuals in the EU, identify the EU representative and give contact details.",
+    "elementSpecificPrompt": "Look for 'EU representative' or equivalent wording with a name and a reachable contact (email/postal).",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "If the controller/processor is not established in the EU but targets/monitors individuals in the EU",
+    "priority": 2
+  },
+  {
+    "id": "GDPR_37",
+    "name": "Declare whether a DPO is appointed (YES/NO); contacts are checked under 13(1)(b)",
+    "description": "If the policy indicates that the organisation falls under DPO-appointment criteria, it should state whether a DPO is appointed. If appointed, the DPO contact details must appear under Art. 13(1)(b) (handled elsewhere).",
+    "elementSpecificPrompt": "Look for explicit wording like 'We have appointed a Data Protection Officer (DPO)…' or 'No DPO has been appointed.' If the policy itself claims public authority status, large-scale regular/systematic monitoring, or large-scale processing of special/criminal data but gives no DPO statement, mark as missing.",
+    "judgement": "present, missing, ambiguos, not required",
+    "required_if": "If the policy text itself indicates Art. 37(1) triggers (public authority; large-scale monitoring; large-scale special-category or criminal data processing). Otherwise, from the notice text alone, not required.",
+    "priority": 2
   }
 ]
+
+

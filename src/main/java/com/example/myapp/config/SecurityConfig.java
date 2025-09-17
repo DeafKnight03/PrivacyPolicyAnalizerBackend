@@ -40,6 +40,9 @@ public class SecurityConfig {
                                 .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/api/auth/refresh").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/api/policies/analyze1").hasAnyRole("USER","USERPREMIUM")
+                                .requestMatchers(HttpMethod.POST, "/api/policies/analyze2").hasRole("USERPREMIUM")
+                                .requestMatchers(HttpMethod.POST, "/api/policies/save").hasAnyRole("USER","USERPREMIUM")
+                                .requestMatchers(HttpMethod.POST, "/api/policies/count").hasAnyRole("USER","USERPREMIUM")
 
 
                                 .anyRequest().authenticated()
